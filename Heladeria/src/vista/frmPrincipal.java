@@ -48,11 +48,16 @@ public class frmPrincipal extends javax.swing.JFrame {
         );
 
         helado.setText("Helado");
+        helado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miNuevoActionPerformed(evt);
+            }
+        });
 
         btnNuevoHelado.setText("Nuevo Helado");
         btnNuevoHelado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miNuevoActionPerformed(evt);
+                btnNuevoHeladoActionPerformed(evt);
             }
         });
         helado.add(btnNuevoHelado);
@@ -86,18 +91,22 @@ public class frmPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void miNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNuevoActionPerformed
+    private void btnNuevoHeladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoHeladoActionPerformed
         frmHelado formulario=new frmHelado();
         panelPrincipal.add(formulario);
         formulario.setVisible(true);
         
-    }//GEN-LAST:event_miNuevoActionPerformed
+    }//GEN-LAST:event_btnNuevoHeladoActionPerformed
 
     private void btnListarHeladosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnListarHeladosActionPerformed
         frmListadoHelados formulario=new frmListadoHelados();
         panelPrincipal.add(formulario);
         formulario.setVisible(true);
     }//GEN-LAST:event_btnListarHeladosActionPerformed
+
+    private void miNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miNuevoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_miNuevoActionPerformed
 
     /**
      * @param args the command line arguments

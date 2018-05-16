@@ -25,11 +25,11 @@ public class conexion {
     public conexion() {
         try {
             Class.forName("jdbc_driver");
-            Connection cnn=DriverManager.getConnection(jdbc_urc, jdbc_user, jdbc_urc);
-            PreparedStatement ps=cnn.prepareStatement("select * from pelicula");
+            Connection cnn=DriverManager.getConnection(jdbc_urc,jdbc_user,JDBC_pass);
+            PreparedStatement ps=cnn.prepareStatement("select * from heladeria");
             ResultSet rs =ps.executeQuery();
             while(rs.next()){
-                System.out.println(" "+rs.getString("titulo"));
+                System.out.println(" "+rs.getString("sabor"));
             }
             cnn.close();
         } catch (SQLException ex) {
