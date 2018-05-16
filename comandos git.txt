@@ -1,0 +1,15 @@
+git clone y el repositorio
+//
+git status
+// dentro del subdirectorio clonado
+git add .
+// permite agregar los archivos a guardar con el git status
+git commit-m "heladeria mas comandos"
+
+//se pueden hacer varios commit
+
+git push origin master -f
+//se ingresa la cuenta de github, y la contraseña
+
+git config --global user.email "maximacu@hotmail.com"
+  git config --global user.name "lovardoludwig"
